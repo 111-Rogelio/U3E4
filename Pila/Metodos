@@ -1,0 +1,50 @@
+clase pública ClasePila {
+
+    NodoPila cima;
+    int tam;
+
+    ClasePila pública () {
+        this.cima = null;
+        this.tam = 0;
+    }
+
+    public boolean EstaVacia () {
+        if (cima == null) {
+            devuelve verdadero;
+        } más {
+            falso retorno;
+        }
+    }
+
+    public void Agregar (int d) {
+        NodoPila nuevo = nuevo NodoPila (d);
+        nuevo.siguiente = cima;
+        cima = nuevo;
+        tam ++;
+    }
+
+    public int quitar () {
+        int aux = cima.dato;
+        cima = cima.siguiente;
+        tam--;
+        return aux;
+    }
+
+    public int cima () {
+        volver cima.dato;
+    }
+
+    public int tama () {
+        return tam;
+    }
+
+    public void MostrarPila () {
+        NodoPila aux = cima;
+        while (aux! = null) {
+            System.out.println ("[" + aux.dato + "]");
+            aux = aux.siguiente;
+        }
+        System.out.println ("");
+    }
+
+}
